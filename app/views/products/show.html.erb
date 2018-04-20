@@ -1,0 +1,11 @@
+<section>
+
+  <%= link_to("Home", products_path) %>
+  <h2><%= @product.name %></h2>
+  <img src="/pic<%= @product.id %>.jpeg" alt="<%= @product.description %>">
+  <h3><%= @product.description %></h3>
+  <h3><%= @product.price_in_cents %></h3>
+  <h3><%= link_to("Edit", edit_product_path(@product.id)) %></h3>
+  <h3><%= link_to("Delete", product_path, :method => :delete) %></h3>
+
+</section>
